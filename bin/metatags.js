@@ -21,7 +21,8 @@
         //Reading files
         var stream = fs.createReadStream(data)
         mt.metatags(stream, function (result) {
-            console.log(result)
+            result.file = data
+            console.log(JSON.stringify(result))
         })
     })
     program.version('1.0.0')
