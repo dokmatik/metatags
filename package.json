@@ -1,0 +1,27 @@
+{
+    "name": "metatags",
+    "version": "1.0.0",
+    "main": "./lib/metatags",
+    "bin": "./bin/metatags.js",
+    "description": "A package for accessing mp3 metatags",
+    "author": "Metin Göktay <metin.goktay@gmail.com>",
+    "dependencies": {
+        "musicmetadata": "0.x.x",
+        "commander": "1.x.x"
+    },
+    "engine": "node >= 0.10.0",
+    "directories": {
+        "doc": "doc",
+        "test": "test"
+    },
+    "scripts": {
+        "test": "mocha"
+    },
+    "repository": "https://github.com/dokmatik/metatags",
+    "keywords": [
+        "mp3",
+        "id3",
+        "tags"
+    ],
+    "license": "BSD"
+}
