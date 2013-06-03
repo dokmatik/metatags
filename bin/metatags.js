@@ -12,10 +12,12 @@
     //Requiring files
     var fs = require('fs');
     var mt = require('./../lib/metatags');
-    var readline = require('readline')
+    var carrier = require('carrier')
     var program = require('commander')
 
-    var rl = readline.createInterface(process.stdin, process.stdout)
+    process.stdin.resume()
+    process.stdin.setEncoding('utf8')
+    var rl = carrier.carry(process.stdin)
 
     rl.on('line', function (data) {
         //Reading files
@@ -25,6 +27,8 @@
             console.log(JSON.stringify(result))
         })
     })
+
+
     program.version('1.0.0')
         .parse(process.argv)
 
